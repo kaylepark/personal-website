@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +7,17 @@
 }
 
 :root {
-  --bg: #fdf6f0;
+  --bg: #f9f7f4;
   --surface: #ffffff;
-  --accent: #f7c5d5;
-  --accent2: #c5d8f7;
-  --accent3: #c5f7d8;
-  --accent4: #f7f0c5;
-  --accent5: #e0c5f7;
-  --text: #3a3a3a;
-  --muted: #888;
-  --border: #eaddd7;
-  --nav-bg: #fff5f8;
+  --accent: #b8d4e8;
+  --text: #2c1f14;
+  --muted: #9a8878;
+  --border: #e2d9cf;
+  --nav-bg: #ffffff;
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Ubuntu', sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -39,11 +37,11 @@ nav {
 }
 
 nav .logo {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--text);
   text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 nav ul {
@@ -55,9 +53,9 @@ nav ul {
 nav ul a {
   text-decoration: none;
   color: var(--muted);
-  font-family: 'Helvetica Neue', sans-serif;
   font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   transition: color 0.2s;
 }
 
@@ -74,59 +72,67 @@ main {
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
   color: var(--text);
 }
 
 h2 {
-  font-size: 1.3rem;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 300;
   color: var(--muted);
   margin-bottom: 2rem;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 0.4rem;
 }
 
 p {
   line-height: 1.8;
   margin-bottom: 1rem;
-  color: #555;
+  color: #6b5a4e;
+  font-weight: 300;
 }
 
 /* Chip / tag */
 .chip {
   display: inline-block;
   padding: 0.2rem 0.8rem;
-  border-radius: 99px;
-  font-size: 0.8rem;
-  font-family: 'Helvetica Neue', sans-serif;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 400;
   margin: 0.2rem;
+  border: 1px solid var(--border);
 }
 
-.chip-pink   { background: var(--accent);  color: #7a3a4a; }
-.chip-blue   { background: var(--accent2); color: #2a4a7a; }
-.chip-green  { background: var(--accent3); color: #2a6a4a; }
-.chip-yellow { background: var(--accent4); color: #6a5a1a; }
-.chip-purple { background: var(--accent5); color: #4a2a7a; }
+.chip-blue   { background: #ddeef8; color: #2a5070; border-color: #b8d4e8; }
+.chip-brown  { background: #f0e8e0; color: #5a3a20; border-color: #d9c8b8; }
+.chip-cream  { background: #f7f2eb; color: #6a5030; border-color: #ddd0be; }
+.chip-slate  { background: #e8eef2; color: #2a3a48; border-color: #c0cdd8; }
+.chip-warm   { background: #f5ede4; color: #7a4a28; border-color: #dfc8b0; }
 
 /* Card */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #c8b8a8;
 }
 
 .card .meta {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 300;
   margin-bottom: 0.5rem;
 }
 
@@ -136,7 +142,7 @@ p {
 }
 
 .card a:hover h3 {
-  text-decoration: underline;
+  color: #4a8ab0;
 }
 
 /* Divider */
@@ -144,52 +150,6 @@ p {
   border: none;
   border-top: 1px solid var(--border);
   margin: 2.5rem 0;
-}
-
-/* Resume sections */
-.resume-section {
-  margin-bottom: 2.5rem;
-}
-
-.resume-section h2 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.4rem;
-}
-
-.resume-item {
-  margin-bottom: 1.4rem;
-}
-
-.resume-item .role {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.resume-item .place {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-.resume-item .dates {
-  font-size: 0.82rem;
-  color: var(--muted);
-  font-family: 'Helvetica Neue', sans-serif;
-  margin-bottom: 0.4rem;
-}
-
-.resume-item ul {
-  padding-left: 1.2rem;
-  color: #555;
-  line-height: 1.7;
-  font-size: 0.95rem;
 }
 
 /* Contact form */
@@ -200,8 +160,8 @@ form {
 }
 
 form label {
-  font-size: 0.85rem;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
   color: var(--muted);
   margin-bottom: 0.2rem;
   display: block;
@@ -212,10 +172,11 @@ form textarea {
   width: 100%;
   padding: 0.7rem 1rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 6px;
   background: var(--surface);
   font-size: 0.95rem;
-  font-family: 'Georgia', serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
   color: var(--text);
   transition: border-color 0.2s;
 }
@@ -223,7 +184,7 @@ form textarea {
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #f7a8c4;
+  border-color: var(--accent);
 }
 
 form textarea {
@@ -234,24 +195,25 @@ form textarea {
 form button {
   align-self: flex-start;
   background: var(--accent);
-  color: #7a3a4a;
+  color: #1a3a50;
   border: none;
-  border-radius: 8px;
-  padding: 0.7rem 1.6rem;
+  border-radius: 6px;
+  padding: 0.65rem 1.6rem;
   font-size: 0.9rem;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
   cursor: pointer;
   transition: opacity 0.2s;
 }
 
 form button:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* Social links */
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   margin-top: 2rem;
   flex-wrap: wrap;
 }
@@ -259,18 +221,19 @@ form button:hover {
 .social-links a {
   display: inline-block;
   padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  font-family: 'Helvetica Neue', sans-serif;
+  border-radius: 6px;
   font-size: 0.85rem;
+  font-weight: 400;
   text-decoration: none;
   border: 1px solid var(--border);
   color: var(--text);
   background: var(--surface);
-  transition: background 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .social-links a:hover {
-  background: var(--accent);
+  background: #ddeef8;
+  border-color: var(--accent);
 }
 
 /* Hero avatar placeholder */
@@ -282,10 +245,10 @@ form button:hover {
 }
 
 .avatar {
-  width: 90px;
-  height: 90px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background: linear-gradient(135deg, #ddeef8, #e8ddd0);
   flex-shrink: 0;
 }
 
@@ -293,8 +256,8 @@ footer {
   text-align: center;
   padding: 2rem;
   color: var(--muted);
-  font-size: 0.82rem;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
   border-top: 1px solid var(--border);
   margin-top: 4rem;
 }
