@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &middot; Kayle Park</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">Kayle Park</a>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contact</h1>
+    <h2>I'd love to hear from you.</h2>
+
+    <p>Whether it's a project idea, a question, or just a hello — feel free to reach out.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <!-- tip: replace the form action URL with your Formspree ID to activate -->
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="kayle.park@gmail.com" required />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+      </div>
+      <button type="submit">Send message</button>
+    </form>
+
+    <hr class="divider" />
+
+    <p style="color: var(--muted); font-size: 0.9rem;">You can also find me on:</p>
+    <div class="social-links">
+      <a href="mailto:kayle.park@gmail.com">kayle.park@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kayle-park-83a236203/" target="_blank">LinkedIn</a>
+      <a href="https://x.com/kaylepark31" target="_blank">X</a>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Kayle Park</footer>
+
+</body>
+</html>
