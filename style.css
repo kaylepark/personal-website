@@ -21,6 +21,22 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  position: relative;
+}
+
+#sand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+nav, .landing-hero, .landing-divider, .landing-bottom, main, footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* Nav */

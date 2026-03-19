@@ -135,5 +135,66 @@
 
   <footer>&copy; 2026 Kayle Park</footer>
 
+  <canvas id="sand"></canvas>
+  <script>
+    (function() {
+      const canvas = document.getElementById('sand');
+      const ctx = canvas.getContext('2d');
+      let w, h, grains;
+
+      const colors = [
+        'rgba(180,160,130,', 'rgba(200,180,150,', 'rgba(160,140,110,',
+        'rgba(190,170,140,', 'rgba(170,150,120,'
+      ];
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = document.body.scrollHeight;
+      }
+
+      function createGrains() {
+        const count = Math.floor((w * h) / 800);
+        grains = [];
+        for (let i = 0; i < count; i++) {
+          grains.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 1.2 + 0.4,
+            dx: (Math.random() - 0.5) * 0.15,
+            dy: (Math.random() - 0.5) * 0.1 + 0.05,
+            alpha: Math.random() * 0.25 + 0.05,
+            color: colors[Math.floor(Math.random() * colors.length)]
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (const g of grains) {
+          g.x += g.dx;
+          g.y += g.dy;
+          if (g.x < 0) g.x = w;
+          if (g.x > w) g.x = 0;
+          if (g.y > h) g.y = 0;
+          if (g.y < 0) g.y = h;
+          ctx.beginPath();
+          ctx.arc(g.x, g.y, g.r, 0, Math.PI * 2);
+          ctx.fillStyle = g.color + g.alpha + ')';
+          ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      createGrains();
+      draw();
+
+      window.addEventListener('resize', function() {
+        resize();
+        createGrains();
+      });
+    })();
+  </script>
+
 </body>
 </html>
