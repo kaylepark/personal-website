@@ -24,16 +24,32 @@
     }
 
     .landing-hero h1 {
-      font-family: 'Lilita One', cursive;
-      font-weight: 400;
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
       font-size: clamp(4rem, 12vw, 8rem);
-      line-height: 1.1;
+      line-height: 1.15;
       overflow: visible;
-      background: linear-gradient(135deg, #7a4a28 0%, #4a7a9b 60%, #6ab8d8 100%);
+      margin-bottom: 2.5rem;
+    }
+
+    .landing-hero h1 span {
+      display: inline-block;
+      background: linear-gradient(135deg, #3a2a14 0%, #7a4a28 25%, #4a7a9b 50%, #6ab8d8 75%, #7a4a28 100%);
+      background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 2.5rem;
+      animation: gradientShift 6s ease-in-out infinite;
+    }
+
+    .landing-hero h1 .space {
+      width: 0.3em;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .landing-hero .intro {
@@ -96,7 +112,7 @@
 
   <div class="landing-hero">
     <p class="hi">Hi, I'm</p>
-    <h1>Kayle Park</h1>
+    <h1><span style="animation-delay:0s">K</span><span style="animation-delay:0.15s">a</span><span style="animation-delay:0.3s">y</span><span style="animation-delay:0.45s">l</span><span style="animation-delay:0.6s">e</span><span class="space"> </span><span style="animation-delay:0.9s">P</span><span style="animation-delay:1.05s">a</span><span style="animation-delay:1.2s">r</span><span style="animation-delay:1.35s">k</span></h1>
 
     <p class="intro">
       I <em>[what you do]</em>, <em>[another thing you do]</em>,
