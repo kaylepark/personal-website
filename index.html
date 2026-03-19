@@ -76,39 +76,9 @@
       font-weight: 300;
     }
 
-    .landing-divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 3rem 2rem;
-      max-width: 900px;
-    }
-
-    .landing-bottom {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2rem 2rem;
-    }
-
-    .landing-bottom h3 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      font-weight: 500;
-      margin-bottom: 0.8rem;
-    }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a class="logo" href="index.html">Kayle Park</a>
-    <ul>
-      <li><a href="index.html" class="active">About</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
   <div class="landing-hero">
     <p class="hi">Hi, I'm</p>
@@ -125,31 +95,19 @@
     </p>
   </div>
 
-  <hr class="landing-divider" />
-
-  <div class="landing-bottom">
-    <h3>What I'm into</h3>
-    <p style="margin-bottom: 1.5rem;">
-      <span class="chip chip-brown">Writing</span>
-      <span class="chip chip-slate">Film</span>
-      <span class="chip chip-cream">Fermentation</span>
-      <span class="chip chip-warm">Bread baking</span>
-      <span class="chip chip-blue">Biking</span>
-      <span class="chip chip-slate">Swimming</span>
-      <span class="chip chip-blue">Running</span>
-      <span class="chip chip-cream">Yoga</span>
-    </p>
-
-    <div class="social-links" style="margin-top: 0;">
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">About</a>
+      <a href="writing.html">Writing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
       <a href="https://www.linkedin.com/in/kayle-park-83a236203/" target="_blank">LinkedIn</a>
       <a href="https://x.com/kaylepark31" target="_blank">X</a>
       <a href="https://www.instagram.com/kayle_park" target="_blank">Instagram</a>
       <a href="https://www.instagram.com/kaylesfilm" target="_blank">Film</a>
-      <a href="contact.html">Email me</a>
     </div>
-  </div>
-
-  <footer>&copy; 2026 Kayle Park</footer>
+  </footer>
 
   <canvas id="sand"></canvas>
   <script>
